@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Board | Draw what Ever You Want</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onclick="undo_draw()" id="btn" class="btn">Undo</button>
+            <button onClick = "clear_all()"id="btn" class="btn">Clear</button>
+
+            <div onclick="chang_color(this)" class="color-field" style="background: red;"></div>
+            <div onclick="chang_color(this)" class="color-field" style="background: blue;"></div>
+            <div onclick="chang_color(this)" class="color-field" style="background: green;"></div>
+            <div onclick="chang_color(this)" class="color-field" style="background: yellow;"></div>
+
+            <input onInput="draw_color = this.value " type="color" class="color-picker">
+            <input onInput = "draw_width = this.value" type="range" min="1" max="100" class="pen-range">
+            <button onclick="down_img()" id="btndown" class="btn">Download</button>
+
+        </div>
+        
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>
